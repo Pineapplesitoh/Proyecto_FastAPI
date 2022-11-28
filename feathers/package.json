@@ -1,0 +1,25 @@
+{
+  "name": "proyecto_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pineapplesitoh/Proyecto_TypeScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pineapplesitoh/Proyecto_TypeScript/issues"
+  },
+  "homepage": "https://github.com/Pineapplesitoh/Proyecto_TypeScript#readme",
+  "dependencies": {
+    "@feathersjs/express": "^4.5.15",
+    "@feathersjs/feathers": "^4.5.15",
+    "@feathersjs/socketio": "^4.5.15"
+  }
+}
