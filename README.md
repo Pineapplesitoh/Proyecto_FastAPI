@@ -1,14 +1,16 @@
-# Proyecto_TypeScript
+# Proyecto_FastAPI
 
-Proceso de instalación de él framework y librerias de node.js utilizadas en este proyecto:
+Proceso de instalación de él framework y librerias utilizadas en este proyecto:
 
  - [Visual Studio Code](https://code.visualstudio.com)
 Es donde vamos a desarrollar nuestro  proyecto.
- - [TypeScript](https://www.javascript.com)
+ - [FastAPI](https://fastapi.tiangolo.com)
+Framework en el cual desarrollaremos la API.
+ - [Python](https://www.python.org)
 Es el lenguaje solicitado para la programacion del proyecto.
- - [Node.js](https://nodejs.org/en/)
+ - [Uvicorn](https://www.uvicorn.org)
 Es el entorno de ejecución para ejecutar sitios web. 
-- [Node Package Manager(npm)](https://www.npmjs.com/package/database-js)
+- [Peewee](http://docs.peewee-orm.com/en/latest/)
 Es un gestor de paquetes de Node.js, un entorno de ejecución multiplataforma para ejecutar TypeScript, nos permite instalar de forma muy sencilla y automática paquetes.
  - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 Sirve para ejecutar cualquier tipo de codigo y mostrar los resultados en el Output de VS code.
