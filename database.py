@@ -7,7 +7,6 @@ database = MySQLDatabase(
 )
 
 class User(Model):
-    
     username = CharField(max_length=50)
     email = CharField(max_length=50)
     
