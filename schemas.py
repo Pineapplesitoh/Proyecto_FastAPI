@@ -4,3 +4,6 @@ class UserRequestModel(BaseModel):
     username: str
     email: str
     
+class UserResponseModel(UserRequestModel):
+    id: int
+    

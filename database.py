@@ -1,18 +1,27 @@
 from peewee import *
+import mysql.connector
+from mysql.connector import Error
 
-database = MySQLDatabase(
-    'fastapi',
-    user='root',password='Xcarpwesdiwem1',
-    host='localhost', port= 3306 
-)
-
-class User(Model):
-    username = CharField(max_length=50)
-    email = CharField(max_length=50)
+class DAO():
     
-    def __str__(self):
-        return self.username
+    def __init__(self):
+        try:
+            self.conexion=mysql.connector.connect(
+            host='localhost',
+            port= 3306,
+            user='root',
+            password='Xcarpwesdiwem1',
+            db='fastapi'
+            )
+        except Error as ex:
+            print("Error al intentar la conexión: {0}".format(ex))
     
-    class Meta:
-        database = database
-        table_name = 'users'
+    def registro_usuario(self,User):
+        if self.conexion.is_connected():
+            try:
+                cursor = self.conexion.cursor()
+                sql = "INSTER INTO users(Nombre,Apellido_p,Apellido_m,"
+                resultados = cursor.fetchall()
+                return resultados
+            except Error as ex:
+                print("Error al intentar la conexión: {0}".format(ex))

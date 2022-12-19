@@ -1,42 +1,31 @@
-from fastapi import FastAPI
-from database import database as connection
-from database import User
-from schemas import UserRequestModel
-from fastapi import HTTPException
+from fastapi import FastAPI, HTTPException, Request, Form
+from schemas import UserRequestModel, UserResponseModel
+from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from database import DAO
+
+templates = Jinja2Templates(directory="./GUI")
 
 app = FastAPI(title='Proyecto_FastAPI',
               description='Proyecto realizado en python',
               version='1.0.1')
 
-@app.on_event('startup')
-def startup():
-    if connection.is_closed():
-        connection.connect()
-        
-    connection.create_tables([User])
-
-@app.on_event('shutdown')
-def shutdown():
-    if not connection.is_closed():
-        connection.close()
-
-@app.get('/')
-async def index():
-    return "Hola Mundo"
-
-@app.post('/users')
-async def create_user(user_request: UserRequestModel):
-    user = User.create(
-        username = user.username,
-        email = user.email
-    )
-    return user_request
-
-@app.get('/users/{user_id}')
-async def get_user(user_id):
-    user = User.select().where(User.id == user.id).first()
-
-    if user:
-        return True
-    else:
-        return HTTPException(404, 'User not found')
+@app.get('/', response_class=HTMLResponse)
+async def index(req: Request):
+    return templates.TemplateResponse("cuerpo/index.html", {"request": req})
+@app.post('/', response_class=HTMLResponse)
+async def index(req: Request):
+    return templates.TemplateResponse("cuerpo/index.html", {"request": req})
+    
+@app.get('/users', response_class=HTMLResponse)
+async def create_user(user_request: UserRequestModel, req: Request):
+    return user_request, templates.TemplateResponse("cuerpo/singup.html", {"request": req})
+@app.post('/users', response_class=HTMLResponse)
+async def create_user(Nombre: str = Form(), Apellido_p: str = Form(), Apellido_m: str = Form(), 
+                      Fecha_Nacimiento: str = Form(),Run: str = Form(), Genero: str = Form(),
+                      Telefono: str = Form(), Email: str = Form(), Contraseña: str = Form()
+                      ):
+    data_user = []
+    dao.
+    return templates.TemplateResponse("cuerpo/singup.html", {"request": req})
