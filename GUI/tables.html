@@ -1,0 +1,18 @@
+{% extends "plantilla/esquema_user.html" %}
+{% block title %}Consultar publicaciones{% endblock %}
+{%block content %}
+<table>
+    <tr>
+        <th>Productos</th>
+        <th>Lugar</th>
+        <th>Precios</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row.Productos }}</td>
+        <td>{{ row.Lugar }}</td>
+        <td>{{ row.Precio }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

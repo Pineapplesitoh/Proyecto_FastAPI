@@ -1,0 +1,165 @@
+{% extends "plantilla/esquema.html" %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+
+<style>
+    body {
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    .modal-login {
+        color: #636363;
+        width: 350px;
+    }
+
+    .modal-login .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .modal-login .modal-header {
+        border-bottom: none;
+        position: relative;
+        justify-content: center;
+    }
+
+    .modal-login h4 {
+        text-align: center;
+        font-size: 26px;
+        margin: 30px 0 -15px;
+    }
+
+    .modal-login .form-control:focus {
+        border-color: #14c9e5;
+    }
+
+    .modal-login .form-control,
+    .modal-login .btn {
+        min-height: 40px;
+        border-radius: 3px;
+    }
+
+    .modal-login .modal-footer {
+        background: #ecf0f1;
+        border-color: #dee4e7;
+        text-align: center;
+        justify-content: center;
+        margin: 0 -20px -20px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .modal-login .modal-footer a {
+        color: #999;
+    }
+
+    .modal-login .avatar {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: -70px;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        z-index: 9;
+        background: #14c9e5;
+        padding: 15px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-caption h5 {
+        color: rgba(255, 255, 255, 0.719);
+    }
+
+    .modal-login .avatar img {
+        width: 100%;
+    }
+
+    .modal-login.modal-dialog {
+        margin-top: 80px;
+    }
+
+    .modal-login .btn,
+    .modal-login .btn:active {
+        color: #fff;
+        border-radius: 4px;
+        background: #14c9e5 !important;
+        text-decoration: none;
+        transition: all 0.4s;
+        line-height: normal;
+        border: none;
+    }
+
+    .modal-login .btn:hover,
+    .modal-login .btn:focus {
+        background: #14c9e5 !important;
+        outline: none;
+    }
+
+    .slide {
+        margin-top: 10px;
+    }
+
+    .carousel-inner img {
+        height: 500px;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        height: 500px;
+    }
+</style>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Frontis_UNAP_Iquique.JPG/1200px-Frontis_UNAP_Iquique.JPG"
+                class="img-fluid d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bienvenidos</h5>
+                <p>Unapinos con hambre</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://p4.wallpaperbetter.com/wallpaper/33/121/143/minimalism-rabbit-black-background-sitting-wallpaper-preview.jpg"
+                class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>A la</h5>
+                <p>Inanición total</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://p4.wallpaperbetter.com/wallpaper/270/645/228/johnny-bravo-wallpaper-preview.jpg"
+                class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>UNAPYME</h5>
+                <p>Desde la cuna</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+<div class="h4 pb-2 mb-4 border-bottom border-dark m-3 mt-4">
+    Espacio libre para promocionar a nuestr@s emprededores!
+</div>
+
+{% endblock %}
